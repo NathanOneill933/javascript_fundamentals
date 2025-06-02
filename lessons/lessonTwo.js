@@ -14,3 +14,6 @@ console.log(amount);
 
 const FULL_NAME = "John Doe";
 const AMOUNT = 1000;
+
+//C:\Users\Nayna
+//~/Javascript = C:\Users\Nayna\javascript_fundamentals
