@@ -16,5 +16,6 @@ const FULL_NAME = "John Doe";
 const AMOUNT = 1000;
 console.log('Hello, World!');
 console.log('Hi, there!');
+console.log('Hi from GitHub!');
 //C:\Users\Nayna
 //~/Javascript = C:\Users\Nayna\javascript_fundamentals
