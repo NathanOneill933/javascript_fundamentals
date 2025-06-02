@@ -30,13 +30,20 @@ const VALUE_2 = 20;
 
 //console.log(`${VALUE_1} is greater than ${VALUE_2}`)
 
-//console.log('It\'s a cat.')
-//console.log("It's a \t cat.")
-console.log(longString.length)
-const name = "Carl"
-console.log(name.length)
+//console.log('It\'s a cat.');
+//console.log("It's a \t cat.");
+//console.log(longString.length);
+const name = "Carl";
+//console.log(name.length);
 
-console.log(name.at(-3))
+//console.log(name.at(-3));
 //C, a, r, l -> String
 //0, 1, 2, 3 -> Indexing Number left to right
 //-4, -3, -2, -1 ->Indexing Number Right to left
+
+console.log(name.includes('ar'));
+console.log(name.toUpperCase());
+//Boolean Value or data type only has true or false
+console.log("            HI        ".trim())
+console.log("            HI        ".trim().length)
+console.log("            HI        ".length)
