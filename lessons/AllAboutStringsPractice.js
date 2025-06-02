@@ -44,6 +44,5 @@ const name = "Carl";
 console.log(name.includes('ar'));
 console.log(name.toUpperCase());
 //Boolean Value or data type only has true or false
-console.log("            HI        ".trim())
 console.log("            HI        ".trim().length)
 console.log("            HI        ".length)
