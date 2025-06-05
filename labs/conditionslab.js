@@ -12,10 +12,10 @@ function comparisonFunc(paramOne, paramTwo){
 
 //Testing
 
-// comparisonFunc(10,10);
-// comparisonFunc(5,8);
-// comparisonFunc('Hi','Hi');
-// comparisonFunc('Hi','Bye');
+comparisonFunc(10,10);
+comparisonFunc(5,8);
+comparisonFunc('Hi','Hi');
+comparisonFunc('Hi','Bye');
 
 //Task Two
 
