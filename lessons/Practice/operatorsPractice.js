@@ -94,3 +94,27 @@ function logiclyCompare(paramOne, paramTwo){
     
 }
 // logiclyCompare(6, 3);
+
+// Increment
+function incrementExample(){
+    let delta = 10;
+    const sum = delta++;
+    console.log(`delta: ${delta}, sum: ${sum}`);
+
+    let echo = 5;
+    const sum2 = ++echo
+    console.log(`echo: ${echo}, sum2: ${sum2}`);
+}
+incrementExample();
+// Decrement
+function decrementExample(){
+    let foxtrot = 10;
+    const sum = foxtrot--;
+    console.log(`foxtrot: ${foxtrot}, sum: ${sum}`);
+
+    let hotel = 5;
+    const sum2 = --hotel
+    console.log(`hotel: ${hotel}, sum2: ${sum2}`);
+}
+decrementExample();
+    
