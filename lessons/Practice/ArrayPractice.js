@@ -71,7 +71,7 @@ const updateElement = (IndexNum) => {
 // reversedArr[1] = 'AAA';
 // console.log(week);
 
-const pushExample = week.push('Whateverday', false);
-console.log(pushExample);
-console.log(week);
+// const pushExample = week.push('Whateverday', false);
+// console.log(pushExample);
+// console.log(week);
 
