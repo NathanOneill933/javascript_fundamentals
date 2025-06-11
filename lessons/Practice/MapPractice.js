@@ -64,7 +64,7 @@ const programmingLanguages = new Map([
 //     console.log(`The key is ${key}. The value is ${value}.`);
     
 // };
-
+// programmingLanguages.forEach(proccessData);
 programmingLanguages.forEach(function proccessData(value, key) {
     console.log(`The key is ${key}. The value is ${value}.`);
     
