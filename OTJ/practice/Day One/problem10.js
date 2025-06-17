@@ -3,9 +3,6 @@ const inputStr = "JavaScript is one popular programming language.";
 
 
 const words = inputStr.split(" ");
-const reducedInput = words.reduce()
-
-
 function minWord(Str) {
     const words = Str.split(" ");
     return words.reduce((smallest, current) => 
@@ -13,11 +10,16 @@ function minWord(Str) {
 };
 
 
-function maxWord(){
-
+function maxWord(Str){
+    const words = Str.split(" ");
+    return words.reduce((largest, current) =>
+        current.length > largest.length ? current: largest);
 }
 
 const smallestword = minWord(inputStr)
-console.log(smallestword);
+const largestword = maxWord(inputStr)
+console.log(`The smallest word is ${smallestword}. The largest word is ${largestword}`);
+
+
 
 

@@ -45,5 +45,72 @@ function getGrade(value, callback) {
     callback(gradeValue)
 }
 
-getGrade(45, determineGrade);
+// getGrade(45, determineGrade);
 
+
+//Promise
+//Event Based = Pending, Success, and Failure. Asynchronous
+let promise = new Promise((resolve, reject) => {
+    let number = 20;
+
+    setTimeout(() => {
+        if (number > 10) {
+            resolve(number)
+        }else {reject("The number is not greater than 10.")}
+    }, 5000)
+})
+
+// promise.then((value) => {
+//     console.log(`The State was a success, and the value is ${value}`);
+    
+// }).catch((error) => {
+//     console.log(error);
+    
+// })
+
+function returnPromise() {
+    return new Promise((resolve, reject) => {
+    let number = 20;
+
+    setTimeout(() => {
+            if (number > 10) {
+                resolve(number)
+             }else {reject("The number is not greater than 10.")}
+        }, 5000)
+    })
+}
+
+async function asyncAwaitFunc(){
+    try {
+        const result = await returnPromise();
+        console.log(result);
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+// asyncAwaitFunc();
+
+// fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json").then((response) => {
+//     if (response.ok){
+//         return response.json(); 
+//     }
+// }).then((data) => {
+//     console.log(data);
+// }).catch((error) => {
+//     console.log(error);
+    
+// })
+
+const getData = async () => {
+    try {
+        const response = await fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json")
+        const data = await response.json();
+        console.log(data);
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+getData()
