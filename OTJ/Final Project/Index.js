@@ -8,7 +8,7 @@ const {
   chooseYourCone,
   getTotalCost
 } = require("./helpers.js");
-const Fruitflavors = require("./fruit_flavors.js")
-const Savoryflavors = require("./savory_flavor.js")
-const Etcflavors = require("./chocoloate_and_other_flavors.js")
-const coneTypes = require("./cone_types.js")
+const Fruitflavors = require("OTJ\Final Project\Ingredients\fruit.js")
+const Savoryflavors = require("OTJ\Final Project\Ingredients\savory.js")
+const Etcflavors = require("OTJ\Final Project\Ingredients\chocolate.js")
+const coneTypes = require("OTJ\Final Project\Ingredients\cones.js")
