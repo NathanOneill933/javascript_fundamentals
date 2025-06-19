@@ -1,4 +1,14 @@
 {
+  "name": "ICECREAM SHOP",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts":{ "echo \"Error: no test specified\" && exit 1"
+},
+"keywords":[],
+"author": "",
+"license":"ISC",
+"type": "commonjs",
+"description": "",
   "dependencies": {
     "prompt-sync": "^4.2.0"
   }
