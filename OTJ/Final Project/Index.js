@@ -24,7 +24,7 @@ console.log(shopTitle);
 console.log(welcomeStr);
 
 let userInput = prompt("Would you like to order Y or N?");
-while(!checkYoeN(userInput)){
+while(!checkYorN(userInput)){
     userInput = prompt('please enter letter "Y" or letter "N":');
 }
 if (userInput.toLowerCase() == "n"){
