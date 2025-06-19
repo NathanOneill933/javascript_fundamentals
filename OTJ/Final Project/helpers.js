@@ -1,5 +1,5 @@
 const fs = require("fs");
-const flavor = require()
+const flavor = require("./Ingredients/fruit.js" && "./Ingredients/chocolate.js" && "./Ingredients/savory.js")
 const cone = require("OTJ\Final Project\Ingredients\cones.js")
 const promt = require("prompt-sync")({ sigint: true});
 
