@@ -41,7 +41,7 @@ exports.chooseYourCone = () => {
   // Convert the Cone object into an array of entries and display the menu.
   const cones = Object.entries(cone);
 
-  // Show the menu and prompt the user to choose a bun.
+  // Show the menu and prompt the user to choose a cone.
   const menuNumbers = showMenu(cone);
 
   // Prompt the user for their choice, ensuring it matches the menu numbers.
@@ -54,3 +54,7 @@ exports.chooseYourCone = () => {
   // If the user chooses a cone from the menu's number, return the selected cone.
   return cones[parseInt(coneChoice) - 1];
 };
+
+exports.ChooseFlavorType = () => {
+  
+}
