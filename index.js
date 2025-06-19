@@ -36,7 +36,13 @@ if (userInput.toLowerCase() == "n"){
     const otherflavors = chooseYourEtcflavors();
     const cone = chooseYourCone();
     const orderedIcecream = new icecreamflavors(fruitflavors, savoryflavors, otherflavors, cone)
-}
+
 
 console.log("Putting together your icecream! Please wait...");
 
+setTimeout(() => {
+    console.log("Your icecream is ready!");
+    orderedIcecream.showInfo();
+    console.log(`\nTotal cost: $${getTotalCost(orderedIcecream)}`;)
+}, 3000);
+}
