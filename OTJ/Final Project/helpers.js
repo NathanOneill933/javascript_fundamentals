@@ -3,7 +3,7 @@ const flavor = require("")
 const flavorFruits = require("./Ingredients/fruit.js")
 const flavorSavory = require("./Ingredients/savory.js")
 const flavorChocolate = require("./Ingredients/chocolate.js")
-const cone = require("./Ingredients/cones.js")
+const cones = require("./Ingredients/cones.js")
 const promt = require("prompt-sync")({ sigint: true});
 
 const showMenu = (itemList) => {

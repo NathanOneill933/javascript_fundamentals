@@ -1,17 +1,17 @@
-// const prompt = require("prompt-sync")({ sigint: true });
-// const {
-//   checkYorN,
-//   chooseYourflavors,
-//   chooseYourFruitflavors,
-//   chooseYourSavoryflavors,
-//   chooseYourEtcflavors,
-//   chooseYourCone,
-//   getTotalCost
-// } = require("./helpers.js");
-// const flavorFruits = require("./fruit.js");
-// const flavorSavory = require("./savory.js");
-// const flavorChocolate = require("./chocolate.js");
-// const coneTypes = require("./cones.js"); 
+const prompt = require("prompt-sync")({ sigint: true });
+const {
+  checkYorN,
+  chooseYourflavors,
+  chooseYourFruitflavors,
+  chooseYourSavoryflavors,
+  chooseYourEtcflavors,
+  chooseYourCone,
+  getTotalCost
+} = require("./helpers.js");
+const flavorFruits = require("./fruit.js");
+const flavorSavory = require("./savory.js");
+const flavorChocolate = require("./chocolate.js");
+const coneTypes = require("./cones.js"); 
 
 const shopTitle =
     "*********************************" +
@@ -34,7 +34,7 @@ if (userInput.toLowerCase() == "n"){
     const flavorFruits = chooseYourFruitflavors();
     const flavorSavory = chooseYourSavoryflavors();
     const flavorChocolate = chooseYourEtcflavors();
-    const cone = chooseYourCone();
+    const cones = chooseYourCone();
     const orderedIcecream = new icecreamflavors(flavorFruits, flavorSavory, flavorChocolate, cone)
 
 
