@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")({ sigint: true });
 const {
   checkYorN,
-  chooseYourFlavors,
+  chooseYourflavors,
   chooseYourFruitflavors,
   chooseYourSavoryflavors,
   chooseYourEtcflavors,

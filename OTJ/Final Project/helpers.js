@@ -1,5 +1,8 @@
 const fs = require("fs");
-const flavor = require("./Ingredients/fruit.js" && "./Ingredients/chocolate.js" && "./Ingredients/savory.js")
+const flavor = require("")
+const flavorFruits = require("./Ingredients/fruit.js")
+const flavorSavory = require("./Ingredients/savory.js")
+const flavorChocolate = require("./Ingredients/chocolate.js")
 const cone = require("./Ingredients/cones.js")
 const promt = require("prompt-sync")({ sigint: true});
 
