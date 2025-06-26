@@ -1,11 +1,10 @@
 const fs = require("fs");
-// const flavor = require("./Ingredient/icecreamFlavors/flavors.js")
+const flavor = ["Fruit", "Savory", "Chocolate"]
 const flavorFruits = require("./Ingredients/icecreamFlavors/fruit.js")
 const flavorSavory = require("./Ingredients/icecreamFlavors/savory.js")
 const flavorChocolate = require("./Ingredients/icecreamFlavors/chocolate.js")
 const coneTypes = require("./Ingredients/cones.js")
-const promt = require("prompt-sync")({ sigint: true});
-
+const prompt = require("prompt-sync")({ sigint: true });
 const showMenu = (itemList) => {
   let menuNumbers = "";
   console.log();
@@ -59,5 +58,55 @@ exports.chooseYourCone = () => {
 };
 
 exports.ChooseFlavorType = () => {
+  // Convert the flavor object into an array of entries and display the menu.
+  const flavors = Object.entries(flavor);
 
+  // Show the menu and prompt the user to choose a flavor.
+  const menuNumbers = showMenu(flavors);
+
+  // Prompt the user for their choice, ensuring it matches the menu numbers.
+  const flavorChoice = promptUser(
+    "Please choose your flavor profile: ",
+    "Please enter only the numbers on the menu: ",
+    menuNumbers)
 }
+
+exports.chooseYourFlavor = () => {
+  //convert flavor objects into arrays of [name, price] 
+  const fruits = Object.entries(flavorFruits);
+  const savory = Object.entries(flavorSavory);
+  const chocolate = Object.entries(flavorChocolate);
+
+  //name & flavor list together
+  const categories = [
+    ['Fruits', fruits],
+    ['Savory', savory],
+    ['Chocolate', chocolate]
+  ];
+
+  // Show the menu & menu numbers 
+  const categoryMenuNumbers = showMenu(categories);
+
+  const flavorTypeChoice = promptUser(
+    "Please choose your flavor type: ",
+    "Please enter only the numbers on the menu: ",
+    categoryMenuNumbers
+  );
+
+  // use flavorTypeChoice to get the chosen category
+  const chosenType = categories[parseInt(flavorTypeChoice) - 1];
+
+//show flavors from flavorType
+const flavorMenuNumbers = showMenu(chosenType[1]);
+
+// Prompt the user to choose a flavor from the selected type.
+const flavorChoice = promptUser(
+  `Please choose your ${chosenType[0]} flavor: `,
+  'Please enter only the numbers on the menu: ',
+  flavorMenuNumbers
+);
+
+// Return the selected flavor.
+return chosenType[1][parseInt(flavorChoice) - 1];
+
+};
