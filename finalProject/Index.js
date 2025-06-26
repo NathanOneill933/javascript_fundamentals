@@ -2,13 +2,12 @@ const prompt = require("prompt-sync")({ sigint: true });
 const {
   checkYorN,
   chooseYourflavors,
-  chooseYourFruitflavors,
   chooseSavoryFlavor,
   chooseYourEtcflavors,
   chooseYourCone,
   getTotalCost,
   ChooseFlavorType,
-  fruitFlavor
+  fruitFlavor,
 } = require("./helpers.js");
 const iceCream = require("./IceCreamClass.js");
 let flavorValue = 0;
