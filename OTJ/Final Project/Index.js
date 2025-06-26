@@ -34,7 +34,7 @@ if (userInput.toLowerCase() == "n"){
     const flavorFruits = chooseYourFruitflavors();
     const flavorSavory = chooseYourSavoryflavors();
     const flavorChocolate = chooseYourEtcflavors();
-    const cones = chooseYourCone();
+    const coneTypes = chooseYourCone();
     const orderedIcecream = new icecreamflavors(flavorFruits, flavorSavory, flavorChocolate, cone)
 
 
