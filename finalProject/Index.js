@@ -9,6 +9,7 @@ const {
   getTotalCost,
   ChooseFlavorType
 } = require("./helpers.js");
+const Icecream = require("./IceCreamClass.js");
 const iceCream = require("./IceCreamClass.js");
 
 //Define Variables for program
@@ -43,8 +44,11 @@ if (userInput.toLowerCase() == "n"){
     
     if(flavorChoice == "1"){
         const flavorFruits = chooseYourFruitflavors();
+        
     }else if(flavorChoice == "2"){
          const flavorSavory = chooseSavoryFlavor();
+         const flavorChocolate = ""
+          const flavorFruits = ""
     }else if(flavorChoice =="3"){
         const flavorChocolate = chooseYourEtcflavors();
     }
@@ -52,7 +56,7 @@ if (userInput.toLowerCase() == "n"){
     const coneTypes = chooseYourCone();
    
    //Create a new Icecream with the Users choces
-    const orderedIcecream = new icecreamflavors(flavorFruits, flavorSavory, flavorChocolate, coneTypes)
+    const orderedIcecream = new Icecream(flavorFruit, flavorSavory, flavorChocolate, coneTypes)
 
 
 

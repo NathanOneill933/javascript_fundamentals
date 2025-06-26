@@ -148,3 +148,17 @@ exports.chooseYourEtcflavors = () => {
  return chocolate[parseInt(chooseYourEtcflavors) - 1];
 
 };
+
+exports.chooseYourCone = () => {
+
+  const cones = Object.entries(coneTypes.cones);
+  const menuNumbers = showMenu(cones);
+  const chooseYourEtcflavors = promptUser(
+    "Please choose your cone: ",
+    "Please enter only the numbers on the menu: ",
+ menuNumbers
+  );
+
+ return cones[parseInt(chooseYourEtcflavors) - 1];
+
+};
