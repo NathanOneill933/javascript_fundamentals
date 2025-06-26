@@ -8,10 +8,11 @@ const {
   chooseYourCone,
   getTotalCost
 } = require("./helpers.js");
-const flavorFruits = require("./fruit.js");
-const flavorSavory = require("./savory.js");
-const flavorChocolate = require("./chocolate.js");
-const coneTypes = require("./cones.js"); 
+const iceCream = require("./IceCreamClass.js");
+const flavorFruits = require(".fruit.js");
+const flavorSavory = require(".savory.js");
+const flavorChocolate = require(".chocolate.js");
+const coneTypes = require(".cones.js"); 
 
 const shopTitle =
     "*********************************" +
