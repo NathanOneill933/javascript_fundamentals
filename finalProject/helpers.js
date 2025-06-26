@@ -69,6 +69,7 @@ exports.ChooseFlavorType = () => {
     "Please choose your flavor profile: ",
     "Please enter only the numbers on the menu: ",
     menuNumbers)
+  return(String(flavorChoice))
 }
 
 exports.chooseYourFlavor = () => {

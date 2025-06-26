@@ -34,13 +34,23 @@ while(!checkYorN(userInput)){
 //If user inputs n, exits out the program
 if (userInput.toLowerCase() == "n"){
     console.log("Thank you for coming, bye!");
+    return;
 }else {
     
 }
+    const flavorChoice = ChooseFlavorType();
     
-    const flavorFruits = chooseYourFruitflavors();
-    const flavorSavory = chooseYourSavoryflavors();
-    const flavorChocolate = chooseYourEtcflavors();
+    if(flavorChoice == "1"){
+        const flavorFruits = chooseYourFruitflavors();
+    }else if(flavorChoice == "2"){
+         const flavorSavory = chooseYourSavoryflavors();
+    }else if(flavorChoice =="3"){
+        const flavorChocolate = chooseYourEtcflavors();
+    }
+    
+    
+   
+    
     const coneTypes = chooseYourCone();
    
    //Create a new Icecream with the Users choces
@@ -57,4 +67,3 @@ setTimeout(() => {
     orderedIcecream.showInfo();
     console.log(`\nTotal cost: $${getTotalCost(orderedIcecream)}`);
 }, 3000);
-}
