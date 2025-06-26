@@ -116,6 +116,8 @@ return chosenType[1][parseInt(flavorChoice) - 1];
 };
 
 
+
+
 //Allows user to pick a savory flavor
 
 exports.chooseSavoryFlavor = () => {
@@ -135,6 +137,10 @@ exports.chooseSavoryFlavor = () => {
   // If the user chooses a flavor from the menu's number, return the selected flavor.
   return flavorSavory[parseInt(flavorChoice) - 1];
 };
+
+
+//Chocolate Flavor Menu
+
 exports.chooseYourEtcflavors = () => {
 
   const chocolate = Object.entries(flavorChocolate.chocolate);
@@ -162,3 +168,20 @@ exports.chooseYourCone = () => {
  return cones[parseInt(chooseYourEtcflavors) - 1];
 
 };
+//fruit flavor
+exports.fruitFlavor = () => {
+  // Convert the fruit object into an array of entries.
+  const fruits = Object.entries(flavorFruits);
+
+  // Show the menu and prompt the user to choose a fruit flavor.
+  const menuNumbers = showMenu(fruits);
+
+  const fruitChoice = promptUser(
+    "Please choose your fruit flavor: ",
+    "Please enter only the numbers on the menu: ",
+    menuNumbers
+  );
+
+  // Return the selected fruit flavor.
+  return fruits[parseInt(fruitChoice) - 1];
+}
