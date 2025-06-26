@@ -6,7 +6,7 @@ class Icecream {
   #flavorSavory;
   #flavorFruits;
 
- // WE NEED TO DEFINE THE VARIABLES 
+  // WE NEED TO DEFINE THE VARIABLES 
   // Constructor to initialize the Icecream with flavors and cones
   constructor(cone, flavorChocolate, flavorFruit, flavorSavory) {
     this.#cone = cone;
