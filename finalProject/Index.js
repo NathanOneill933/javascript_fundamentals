@@ -35,7 +35,7 @@ if (userInput.toLowerCase() == "n"){
     const flavorSavory = chooseYourSavoryflavors();
     const flavorChocolate = chooseYourEtcflavors();
     const coneTypes = chooseYourCone();
-    const orderedIcecream = new icecreamflavors(flavorFruits, flavorSavory, flavorChocolate, cone)
+    const orderedIcecream = new icecreamflavors(flavorFruits, flavorSavory, flavorChocolate, coneTypes)
 
 
 console.log("Putting together your icecream! Please wait...");
