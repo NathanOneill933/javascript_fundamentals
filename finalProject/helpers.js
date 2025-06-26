@@ -155,10 +155,23 @@ exports.chooseYourEtcflavors = () => {
 
 };
 
+exports.chooseYourCone = () => {
+
+  const cones = Object.entries(coneTypes.cones);
+  const menuNumbers = showMenu(cones);
+  const chooseYourEtcflavors = promptUser(
+    "Please choose your cone: ",
+    "Please enter only the numbers on the menu: ",
+ menuNumbers
+  );
+
+ return cones[parseInt(chooseYourEtcflavors) - 1];
+
+};
 //fruit flavor
 exports.fruitFlavor = () => {
   // Convert the fruit object into an array of entries.
-  const fruits = Object.entries(flavorFruits);
+  const fruits = Object.entries(flavorFruits.fruit);
 
   // Show the menu and prompt the user to choose a fruit flavor.
   const menuNumbers = showMenu(fruits);
