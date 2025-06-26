@@ -1,5 +1,5 @@
 const fs = require("fs");
-const flavor = require("./Ingredient/icecreamFlavors")
+// const flavor = require("./Ingredient/icecreamFlavors/flavors.js")
 const flavorFruits = require("./Ingredients/icecreamFlavors/fruit.js")
 const flavorSavory = require("./Ingredients/icecreamFlavors/savory.js")
 const flavorChocolate = require("./Ingredients/icecreamFlavors/chocolate.js")
