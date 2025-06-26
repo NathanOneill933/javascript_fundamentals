@@ -7,7 +7,7 @@ class Icecream {
   #flavorFruits;
 
 
-  // Constructor to initialize the Icecream with bun, meat, vegetables, and cheese
+  // Constructor to initialize the Icecream with flavors and cones
   constructor(cone, flavorChocolate, flavorFruit, flavorSavory) {
     this.#cone = cone;
     this.#flavorChocolate = flavorChocolate;
