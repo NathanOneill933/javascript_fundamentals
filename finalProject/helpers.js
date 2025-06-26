@@ -3,7 +3,8 @@ const flavor = ["Fruit", "Savory", "Chocolate"]
 const flavorFruits = require("./Ingredients/icecreamFlavors/fruit.js")
 const flavorSavory = require("./Ingredients/icecreamFlavors/savory.js")
 const flavorChocolate = require("./Ingredients/icecreamFlavors/chocolate.js")
-const coneTypes = require("./Ingredients/cones.js")
+const coneTypes = require("./Ingredients/cones.js");
+const { chocolate } = require("./Ingredients/icecreamFlavors.js/chocolate.js");
 const prompt = require("prompt-sync")({ sigint: true });
 // Function to display the menu and return the menu numbers as a string.
 const showMenu = (itemList) => {
@@ -133,4 +134,17 @@ exports.chooseSavoryFlavor = () => {
 
   // If the user chooses a flavor from the menu's number, return the selected flavor.
   return flavorSavory[parseInt(flavorChoice) - 1];
+};
+exports.chooseYourEtcflavors = () => {
+
+  const chocolate = Object.entries(chocolate);
+  const menuNumbers = showMenu(chocolate);
+  const chooseYourEtcflavors = promptUser(
+    "Please choose your chocolate flavor: ",
+    "Please enter only the numbers on the menu: ",
+ menuNumbers
+  );
+
+ return chocolate[parseInt(chooseYourEtcflavors) - 1];
+
 };
