@@ -4,8 +4,7 @@ const flavorFruits = require("./Ingredients/icecreamFlavors/fruit.js")
 const flavorSavory = require("./Ingredients/icecreamFlavors/savory.js")
 const flavorChocolate = require("./Ingredients/icecreamFlavors/chocolate.js")
 const coneTypes = require("./Ingredients/cones.js")
-const promt = require("prompt-sync")({ sigint: true});
-
+const prompt = require("prompt-sync")({ sigint: true });
 const showMenu = (itemList) => {
   let menuNumbers = "";
   console.log();

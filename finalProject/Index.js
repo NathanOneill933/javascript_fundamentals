@@ -1,7 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 const {
   checkYorN,
-  chooseYourflavors,
   chooseYourFruitflavors,
   chooseYourSavoryflavors,
   chooseYourEtcflavors,
@@ -37,15 +36,20 @@ if (userInput.toLowerCase() == "n"){
     console.log("Thank you for coming, bye!");
 }else {
     
-    //Gets data to make IceCream
-    const icecreamflavors = ChooseFlavorType();
+    let userInput = prompt("Please choose a Flavor type from the list! \n 1: Fruity \n 2: Savory \n 3: Chocolate \n" );
+    // const icecreamflavors = ChooseFlavorType();
+    
+    while(userInput != 1 || userInput != 2 || userInput != 3){
+    userInput = prompt('please enter 1, 2, or 3:');
+}
+    
     const flavorFruits = chooseYourFruitflavors();
     const flavorSavory = chooseYourSavoryflavors();
     const flavorChocolate = chooseYourEtcflavors();
     const coneTypes = chooseYourCone();
    
    //Create a new Icecream with the Users choces
-    const orderedIcecream = new icecreamflavors(flavorFruits, flavorSavory, flavorChocolate, coneTypes)
+    const orderedIcecream = new IceCreamClass(flavorFruits, flavorSavory, flavorChocolate, coneTypes)
 
 
 
