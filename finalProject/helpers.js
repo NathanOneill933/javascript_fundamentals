@@ -113,6 +113,8 @@ return chosenType[1][parseInt(flavorChoice) - 1];
 
 };
 
+//Chocolate Flavor Menu
+
 exports.chooseYourEtcflavors = () => {
 
   const chocolate = Object.entries(chocolate);
