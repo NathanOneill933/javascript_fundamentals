@@ -1,8 +1,8 @@
 const fs = require("fs");
 const flavor = ["Fruit", "Savory", "Chocolate"]
-const flavorFruits = require("./Ingredients/icecreamFlavors/fruit.js")
-const flavorSavory = require("./Ingredients/icecreamFlavors/savory.js")
-const flavorChocolate = require("./Ingredients/icecreamFlavors/chocolate.js")
+const flavorFruits = require("./Ingredients/icecreamFlavors.js/fruit.js")
+const flavorSavory = require("./Ingredients/icecreamFlavors.js/savory.js")
+const flavorChocolate = require("./Ingredients/icecreamFlavors.js/chocolate.js")
 const coneTypes = require("./Ingredients/cones.js");
 const { chocolate } = require("./Ingredients/icecreamFlavors.js/chocolate.js");
 const prompt = require("prompt-sync")({ sigint: true });
@@ -114,3 +114,55 @@ const flavorChoice = promptUser(
 return chosenType[1][parseInt(flavorChoice) - 1];
 
 };
+
+
+//Allows user to pick a savory flavor
+
+exports.chooseSavoryFlavor = () => {
+  // Convert the bun object into an array of entries and display the menu.
+  const savoryFlavor = Object.entries(flavorSavory.savory);
+
+  // Show the menu and prompt the user to choose a bun.
+  const menuNumbers = showMenu(savoryFlavor);
+
+  // Prompt the user for their choice, ensuring it matches the menu numbers.
+  const flavorChoice = promptUser(
+    "Please choose your flavor: ",
+    "Please enter only the numbers on the menu: ",
+    menuNumbers
+  );
+
+  // If the user chooses a flavor from the menu's number, return the selected flavor.
+  return flavorSavory[parseInt(flavorChoice) - 1];
+};
+exports.chooseYourEtcflavors = () => {
+
+  const chocolate = Object.entries(flavorChocolate.chocolate);
+  const menuNumbers = showMenu(chocolate);
+  const chooseYourEtcflavors = promptUser(
+    "Please choose your chocolate flavor: ",
+    "Please enter only the numbers on the menu: ",
+ menuNumbers
+  );
+
+ return chocolate[parseInt(chooseYourEtcflavors) - 1];
+
+};
+
+//fruit flavor
+exports.fruitFlavor = () => {
+  // Convert the fruit object into an array of entries.
+  const fruits = Object.entries(flavorFruits);
+
+  // Show the menu and prompt the user to choose a fruit flavor.
+  const menuNumbers = showMenu(fruits);
+
+  const fruitChoice = promptUser(
+    "Please choose your fruit flavor: ",
+    "Please enter only the numbers on the menu: ",
+    menuNumbers
+  );
+
+  // Return the selected fruit flavor.
+  return fruits[parseInt(fruitChoice) - 1];
+}
