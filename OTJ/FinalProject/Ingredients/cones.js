@@ -10,4 +10,4 @@ exports.cones = {
   "Gluten Free Cone": 2.5,
   "Specialty Cone": 3.0,
   "Jacketed Cone": 2.25
-}
+};

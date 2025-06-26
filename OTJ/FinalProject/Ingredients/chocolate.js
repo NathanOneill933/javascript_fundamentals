@@ -31,4 +31,4 @@ exports.chocolate = {
   "Spumoni - a molded Italian ice cream made with layers of different colors and flavors, usually containing candied fruits and nuts": 6.49,
   "Stracciatella": 5.99,
   "Vanilla": 4.49
-}
+};

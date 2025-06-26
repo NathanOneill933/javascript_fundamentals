@@ -1,6 +1,7 @@
 const fs = require("fs");
-const flavor = require()
-const cone = require("OTJ\Final Project\Ingredients\cones.js")
+const flavor = require("./Ingredients/fruit.js" && "./Ingredients/chocolate.js" && "./Ingredients/savory.js")
+const cone = require("./Ingredients/cones.js");
+const { log } = require("console");
 const promt = require("prompt-sync")({ sigint: true});
 
 const showMenu = (itemList) => {
@@ -56,5 +57,6 @@ exports.chooseYourCone = () => {
 };
 
 exports.ChooseFlavorType = () => {
+ console.log("What type of flavor would you like?");
   
 }
