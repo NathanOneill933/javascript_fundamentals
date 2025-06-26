@@ -1,8 +1,8 @@
 const fs = require("fs");
 const flavor = ["Fruit", "Savory", "Chocolate"]
-const flavorFruits = require("./Ingredients/icecreamFlavors/fruit.js")
-const flavorSavory = require("./Ingredients/icecreamFlavors/savory.js")
-const flavorChocolate = require("./Ingredients/icecreamFlavors/chocolate.js")
+const flavorFruits = require("./Ingredients/icecreamFlavors.js/fruit.js")
+const flavorSavory = require("./Ingredients/icecreamFlavors.js/savory.js")
+const flavorChocolate = require("./Ingredients/icecreamFlavors.js/chocolate.js")
 const coneTypes = require("./Ingredients/cones.js");
 const { chocolate } = require("./Ingredients/icecreamFlavors.js/chocolate.js");
 const prompt = require("prompt-sync")({ sigint: true });
@@ -137,7 +137,7 @@ exports.chooseSavoryFlavor = () => {
 };
 exports.chooseYourEtcflavors = () => {
 
-  const chocolate = Object.entries(chocolate);
+  const chocolate = Object.entries(flavorChocolate.chocolate);
   const menuNumbers = showMenu(chocolate);
   const chooseYourEtcflavors = promptUser(
     "Please choose your chocolate flavor: ",
