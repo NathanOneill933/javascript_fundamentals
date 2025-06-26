@@ -48,9 +48,6 @@ if (userInput.toLowerCase() == "n"){
         const flavorChocolate = chooseYourEtcflavors();
     }
     
-    
-   
-    
     const coneTypes = chooseYourCone();
    
    //Create a new Icecream with the Users choces
