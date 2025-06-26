@@ -5,11 +5,12 @@ const flavorSavory = require("./Ingredients/icecreamFlavors/savory.js")
 const flavorChocolate = require("./Ingredients/icecreamFlavors/chocolate.js")
 const coneTypes = require("./Ingredients/cones.js")
 const prompt = require("prompt-sync")({ sigint: true });
+// Function to display the menu and return the menu numbers as a string.
 const showMenu = (itemList) => {
   let menuNumbers = "";
   console.log();
 
-  // Loop through the itemList and format each item for display.
+  // Loop and format each item for display.
   for (index = 0; index < itemList.length; index++) {
     const arr = [...itemList[index]];
     arr.splice(1, 0, " - $");
@@ -18,9 +19,10 @@ const showMenu = (itemList) => {
   }
   console.log();
 
-  // Return the string of menu numbers.
+  // Return the menu string.
   return menuNumbers;
 };
+
 
 // Function to prompt the user for input and validate it against the menu numbers.
 const promptUser = (promptMsgOne, promptMsgTwo, menuNumbers) => {
@@ -110,4 +112,25 @@ const flavorChoice = promptUser(
 // Return the selected flavor.
 return chosenType[1][parseInt(flavorChoice) - 1];
 
+};
+
+
+//Allows user to pick a savory flavor
+
+exports.chooseSavoryFlavor = () => {
+  // Convert the bun object into an array of entries and display the menu.
+  const savoryFlavor = Object.entries(flavorSavory.savory);
+
+  // Show the menu and prompt the user to choose a bun.
+  const menuNumbers = showMenu(savoryFlavor);
+
+  // Prompt the user for their choice, ensuring it matches the menu numbers.
+  const flavorChoice = promptUser(
+    "Please choose your flavor: ",
+    "Please enter only the numbers on the menu: ",
+    menuNumbers
+  );
+
+  // If the user chooses a flavor from the menu's number, return the selected flavor.
+  return flavorSavory[parseInt(flavorChoice) - 1];
 };

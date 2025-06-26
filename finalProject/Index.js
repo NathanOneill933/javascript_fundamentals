@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 const {
   checkYorN,
   chooseYourFruitflavors,
-  chooseYourSavoryflavors,
+  chooseSavoryFlavor,
   chooseYourEtcflavors,
   chooseYourCone,
   getTotalCost,
@@ -43,7 +43,7 @@ if (userInput.toLowerCase() == "n"){
     if(flavorChoice == "1"){
         const flavorFruits = chooseYourFruitflavors();
     }else if(flavorChoice == "2"){
-         const flavorSavory = chooseYourSavoryflavors();
+         const flavorSavory = chooseSavoryFlavor();
     }else if(flavorChoice =="3"){
         const flavorChocolate = chooseYourEtcflavors();
     }
