@@ -46,6 +46,7 @@ if (userInput.toLowerCase() == "n"){
     
     if(flavorChoice == "1"){
         flavorFruit = fruitFlavor();
+        console.log(flavorFruit)
         flavorValue = 1
     }else if(flavorChoice == "2"){
         flavorSavory = chooseSavoryFlavor();
@@ -66,7 +67,7 @@ if(flavorValue == 1){
 }else{
     orderedIcecream = new iceCream(coneTypes, flavorChocolate)
 }
-
+// Correct the amount of datapoints lines 64-68
 
 console.log("Putting together your icecream! Please wait...");
 

@@ -6,7 +6,7 @@ class Icecream {
   #flavorSavory;
   #flavorFruits;
 
-
+ // WE NEED TO DEFINE THE VARIABLES 
   // Constructor to initialize the Icecream with flavors and cones
   constructor(cone, flavorChocolate, flavorFruit, flavorSavory) {
     this.#cone = cone;
@@ -37,8 +37,8 @@ class Icecream {
 
     // Check if the flavor are an array of objects or a simple array
     if (this.#flavorChocolate.length == 2 && this.#flavorChocolate[0] != "object") {
-      chocolateflavors = this.#flavorChocolate[0];
-    } else {
+     const chocolateflavors = this.#flavorChocolate[0];
+       } else {
       const arr = [];
 
 // Loop through the savory flavors array and format each flavor for display
@@ -46,9 +46,9 @@ class Icecream {
         arr.push(this.#flavorChocolate[index][0]);
       }
       flavors = arr.join(", ");
-    }
+    } 
     if (this.#flavorFruits.length == 2 && this.#flavorFruits[0] != "object") {
-      fruitflavors = this.#flavorFruits[0];
+      const fruitflavors = this.#flavorFruits[0];
     } else {
       const arr = [];
 
