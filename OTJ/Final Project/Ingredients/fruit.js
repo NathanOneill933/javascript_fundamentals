@@ -19,4 +19,4 @@ exports.fruit = {
   "Tiger tail - a flavor popular in Canada, consisting of orange-flavored ice cream with swirls of black licorice": 12.99,
   "Tutti frutti": 7.99,
   "Watermelon": 6.99
-}
+};

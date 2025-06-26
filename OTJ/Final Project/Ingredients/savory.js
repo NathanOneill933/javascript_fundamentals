@@ -11,4 +11,4 @@ exports.savory = {
   "Taro": 3.49,
   "Spundekäs - based on the German cream cheese of the same name": 4.49,
   "Ube (purple yam) - a popular ice cream flavor in the Philippines": 5.49
-}
+};
