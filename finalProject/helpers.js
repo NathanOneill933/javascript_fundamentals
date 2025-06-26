@@ -61,3 +61,43 @@ exports.chooseYourCone = () => {
 exports.ChooseFlavorType = () => {
 
 }
+
+exports.chooseYourFlavor = () => {
+  //convert flavor objects into arrays of [name, price] 
+  const fruits = Object.entries(flavorFruits);
+  const savory = Object.entries(flavorSavory);
+  const chocolate = Object.entries(flavorChocolate);
+
+  //name & flavor list together
+  const categories = [
+    ['Fruits', fruits],
+    ['Savory', savory],
+    ['Chocolate', chocolate]
+  ];
+
+  // Show the menu & menu numbers 
+  const categoryMenuNumbers = showMenu(categories);
+
+  const flavorTypeChoice = promptUser(
+    "Please choose your flavor type: ",
+    "Please enter only the numbers on the menu: ",
+    categoryMenuNumbers
+  );
+
+  // use flavorTypeChoice to get the chosen category
+  const chosenType = categories[parseInt(flavorTypeChoice) - 1];
+
+//show flavors from flavorType
+const flavorMenuNumbers = showMenu(chosenType[1]);
+
+// Prompt the user to choose a flavor from the selected type.
+const flavorChoice = promptUser(
+  `Please choose your ${chosenType[0]} flavor: `,
+  'Please enter only the numbers on the menu: ',
+  flavorMenuNumbers
+);
+
+// Return the selected flavor.
+return chosenType[1][parseInt(flavorChoice) - 1];
+
+};
