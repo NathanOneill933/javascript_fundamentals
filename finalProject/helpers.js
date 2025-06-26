@@ -171,4 +171,4 @@ exports.fruitFlavor = () => {
 
   // Return the selected fruit flavor.
   return fruits[parseInt(fruitChoice) - 1];
-}
+};
