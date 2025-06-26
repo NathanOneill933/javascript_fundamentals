@@ -13,7 +13,7 @@ const iceCream = require("./IceCreamClass.js");
 //Define Variables for program
 const shopTitle =
     "*********************************" +
-    "*\n||\t\t\t\t||\n||\t   ICECREAM SHOP \t||\n||\t\t\t\t||\n*" +
+    "*\n||\t\t\t\t\t\t\t\t||\n||\t      ICECREAM SHOP \t\t||\n||\t\t\t\t\t\t\t\t||\n*" +
     "*********************************";
 
 const welcomeStr = "Welcome to our Icecream Shop!\n";

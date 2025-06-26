@@ -56,7 +56,7 @@ class Icecream {
      for (index = 0; index < this.flavor.length; index++) {
         arr.push(this.#flavorFruits[index][0]);
       }
-      fflavors = arr.join(", ");
+      flavors = arr.join(", ");
     }
     if (this.#flavorSavory.length == 2 && this.#flavorSavory[0] != "object") {
       savoryflavors = this.#flavorSavory[0];
