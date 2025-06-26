@@ -100,3 +100,21 @@ const flavorChoice = promptUser(
 return chosenType[1][parseInt(flavorChoice) - 1];
 
 };
+
+//fruit flavor
+exports.fruitFlavor = () => {
+  // Convert the fruit object into an array of entries.
+  const fruits = Object.entries(flavorFruits);
+
+  // Show the menu and prompt the user to choose a fruit flavor.
+  const menuNumbers = showMenu(fruits);
+
+  const fruitChoice = promptUser(
+    "Please choose your fruit flavor: ",
+    "Please enter only the numbers on the menu: ",
+    menuNumbers
+  );
+
+  // Return the selected fruit flavor.
+  return fruits[parseInt(fruitChoice) - 1];
+}
