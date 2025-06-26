@@ -36,11 +36,6 @@ if (userInput.toLowerCase() == "n"){
     console.log("Thank you for coming, bye!");
 }else {
     
-    let userInput = prompt("Please choose a Flavor type from the list! \n 1: Fruity \n 2: Savory \n 3: Chocolate \n" );
-    // const icecreamflavors = ChooseFlavorType();
-    
-    while(userInput != 1 || userInput != 2 || userInput != 3){
-    userInput = prompt('please enter 1, 2, or 3:');
 }
     
     const flavorFruits = chooseYourFruitflavors();

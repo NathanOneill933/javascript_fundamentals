@@ -1,5 +1,5 @@
 const fs = require("fs");
-// const flavor = require("./Ingredient/icecreamFlavors/flavors.js")
+const flavor = ["Fruit", "Savory", "Chocolate"]
 const flavorFruits = require("./Ingredients/icecreamFlavors/fruit.js")
 const flavorSavory = require("./Ingredients/icecreamFlavors/savory.js")
 const flavorChocolate = require("./Ingredients/icecreamFlavors/chocolate.js")
@@ -58,5 +58,15 @@ exports.chooseYourCone = () => {
 };
 
 exports.ChooseFlavorType = () => {
+  // Convert the flavor object into an array of entries and display the menu.
+  const flavors = Object.entries(flavor);
 
+  // Show the menu and prompt the user to choose a flavor.
+  const menuNumbers = showMenu(flavors);
+
+  // Prompt the user for their choice, ensuring it matches the menu numbers.
+  const flavorChoice = promptUser(
+    "Please choose your flavor profile: ",
+    "Please enter only the numbers on the menu: ",
+    menuNumbers)
 }
