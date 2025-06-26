@@ -1,6 +1,7 @@
 const prompt = require("prompt-sync")({ sigint: true });
 const {
   checkYorN,
+  chooseYourflavors,
   chooseYourFruitflavors,
   chooseYourSavoryflavors,
   chooseYourEtcflavors,
@@ -36,15 +37,15 @@ if (userInput.toLowerCase() == "n"){
     console.log("Thank you for coming, bye!");
 }else {
     
-}
-    
+    //Gets data to make IceCream
+    const icecreamflavors = ChooseFlavorType();
     const flavorFruits = chooseYourFruitflavors();
     const flavorSavory = chooseYourSavoryflavors();
     const flavorChocolate = chooseYourEtcflavors();
     const coneTypes = chooseYourCone();
    
    //Create a new Icecream with the Users choces
-    const orderedIcecream = new IceCreamClass(flavorFruits, flavorSavory, flavorChocolate, coneTypes)
+    const orderedIcecream = new icecreamflavors(flavorFruits, flavorSavory, flavorChocolate, coneTypes)
 
 
 
