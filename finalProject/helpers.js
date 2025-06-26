@@ -171,7 +171,7 @@ exports.chooseYourCone = () => {
 //fruit flavor
 exports.fruitFlavor = () => {
   // Convert the fruit object into an array of entries.
-  const fruits = Object.entries(flavorFruits);
+  const fruits = Object.entries(flavorFruits.fruit);
 
   // Show the menu and prompt the user to choose a fruit flavor.
   const menuNumbers = showMenu(fruits);

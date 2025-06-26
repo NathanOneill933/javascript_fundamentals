@@ -7,7 +7,8 @@ const {
   chooseYourEtcflavors,
   chooseYourCone,
   getTotalCost,
-  ChooseFlavorType
+  ChooseFlavorType,
+  fruitFlavor
 } = require("./helpers.js");
 const Icecream = require("./IceCreamClass.js");
 const iceCream = require("./IceCreamClass.js");
@@ -43,7 +44,7 @@ if (userInput.toLowerCase() == "n"){
     const flavorChoice = ChooseFlavorType();
     
     if(flavorChoice == "1"){
-        const flavorFruits = chooseYourFruitflavors();
+        const flavorFruits = fruitFlavor();
         
     }else if(flavorChoice == "2"){
          const flavorSavory = chooseSavoryFlavor();
