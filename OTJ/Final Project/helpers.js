@@ -59,5 +59,5 @@ exports.chooseYourCone = () => {
 };
 
 exports.ChooseFlavorType = () => {
-  
+
 }

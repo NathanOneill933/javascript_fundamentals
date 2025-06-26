@@ -1,24 +1,24 @@
-const prompt = require("prompt-sync")({ sigint: true });
-const {
-  checkYorN,
-  chooseYourflavors,
-  chooseYourFruitflavors,
-  chooseYourSavoryflavors,
-  chooseYourEtcflavors,
-  chooseYourCone,
-  getTotalCost
-} = require("./helpers.js");
-const flavorFruits = require("./fruit.js");
-const flavorSavory = require("./savory.js");
-const flavorChocolate = require("./chocolate.js");
-const coneTypes = require("./cones.js"); 
+// const prompt = require("prompt-sync")({ sigint: true });
+// const {
+//   checkYorN,
+//   chooseYourflavors,
+//   chooseYourFruitflavors,
+//   chooseYourSavoryflavors,
+//   chooseYourEtcflavors,
+//   chooseYourCone,
+//   getTotalCost
+// } = require("./helpers.js");
+// const flavorFruits = require("./fruit.js");
+// const flavorSavory = require("./savory.js");
+// const flavorChocolate = require("./chocolate.js");
+// const coneTypes = require("./cones.js"); 
 
 const shopTitle =
     "*********************************" +
-    "*\n||\t\t\t\t\t\t\t\t||\n||\t   ONEILL'S ICECREAM SHOP\t||\n||\t\t\t\t\t\t\t\t||\n*" +
+    "*\n||\t\t\t\t\t\t\t\t||\n||\t       ICECREAM SHOP \t\t||\n||\t\t\t\t\t\t\t\t||\n*" +
     "*********************************";
 
-const welcomeStr = "Welcome to Oneill's Icecream Shop!\n";
+const welcomeStr = "Welcome to our Icecream Shop!\n";
 
 console.log(shopTitle);
 console.log(welcomeStr);
