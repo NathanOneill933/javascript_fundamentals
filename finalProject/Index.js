@@ -10,8 +10,8 @@ const {
   fruitFlavor,
 } = require("./helpers.js");
 const iceCream = require("./IceCreamClass.js");
-let flavorValue = 0;
 //Define Variables for program
+let flavorValue = 0;
 const shopTitle =
     "*********************************" +
     "*\n||\t\t\t\t||\n||\t    ICECREAM SHOP \t||\n||\t\t\t\t||\n*" +
@@ -40,28 +40,31 @@ if (userInput.toLowerCase() == "n"){
     
 }
     const flavorChoice = ChooseFlavorType();
+    let flavorChocolate = "";
+    let flavorSavory = "";
+    let flavorFruit = "";
     
     if(flavorChoice == "1"){
-        const flavorFruit = fruitFlavor();
+        flavorFruit = fruitFlavor();
         flavorValue = 1
     }else if(flavorChoice == "2"){
-         const flavorSavory = chooseSavoryFlavor();
+        flavorSavory = chooseSavoryFlavor();
          flavorValue = 2
     }else if(flavorChoice =="3"){
-        const flavorChocolate = chooseYourEtcflavors();
+        flavorChocolate = chooseYourEtcflavors();
         flavorValue = 3
     }
     
     const coneTypes = chooseYourCone();
    
    //Create a new Icecream with the Users choces
-    // const orderedIcecream = new iceCream(coneTypes, flavorFruit, flavorSavory)
+    let orderedIcecream = ""
 if(flavorValue == 1){
-    const orderedIcecream = new iceCream(coneTypes, flavorFruit)
+    orderedIcecream = new iceCream(coneTypes, flavorFruit)
 }else if(flavorValue == 2){
-    const orderedIcecream = new iceCream(coneTypes,flavorSavory)
+    orderedIcecream = new iceCream(coneTypes,flavorSavory)
 }else{
-    const orderedIcecream = new iceCream(coneTypes, flavorChocolate)
+    orderedIcecream = new iceCream(coneTypes, flavorChocolate)
 }
 
 
