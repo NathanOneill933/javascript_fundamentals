@@ -1,8 +1,9 @@
 const prompt = require("prompt-sync")({ sigint: true });
 const {
   checkYorN,
+  chooseYourflavors,
   chooseYourFruitflavors,
-  chooseYourSavoryflavors,
+  chooseSavoryFlavor,
   chooseYourEtcflavors,
   chooseYourCone,
   getTotalCost,
@@ -13,7 +14,7 @@ const iceCream = require("./IceCreamClass.js");
 //Define Variables for program
 const shopTitle =
     "*********************************" +
-    "*\n||\t\t\t\t\t\t\t\t||\n||\t      ICECREAM SHOP \t\t||\n||\t\t\t\t\t\t\t\t||\n*" +
+    "*\n||\t\t\t\t||\n||\t    ICECREAM SHOP \t||\n||\t\t\t\t||\n*" +
     "*********************************";
 
 const welcomeStr = "Welcome to our Icecream Shop!\n";
@@ -34,22 +35,24 @@ while(!checkYorN(userInput)){
 //If user inputs n, exits out the program
 if (userInput.toLowerCase() == "n"){
     console.log("Thank you for coming, bye!");
+    return;
 }else {
     
-    let userInput = prompt("Please choose a Flavor type from the list! \n 1: Fruity \n 2: Savory \n 3: Chocolate \n" );
-    // const icecreamflavors = ChooseFlavorType();
-    
-    while(userInput != 1 || userInput != 2 || userInput != 3){
-    userInput = prompt('please enter 1, 2, or 3:');
 }
+    const flavorChoice = ChooseFlavorType();
     
-    const flavorFruits = chooseYourFruitflavors();
-    const flavorSavory = chooseYourSavoryflavors();
-    const flavorChocolate = chooseYourEtcflavors();
+    if(flavorChoice == "1"){
+        const flavorFruits = chooseYourFruitflavors();
+    }else if(flavorChoice == "2"){
+         const flavorSavory = chooseSavoryFlavor();
+    }else if(flavorChoice =="3"){
+        const flavorChocolate = chooseYourEtcflavors();
+    }
+    
     const coneTypes = chooseYourCone();
    
    //Create a new Icecream with the Users choces
-    const orderedIcecream = new IceCreamClass(flavorFruits, flavorSavory, flavorChocolate, coneTypes)
+    const orderedIcecream = new icecreamflavors(flavorFruits, flavorSavory, flavorChocolate, coneTypes)
 
 
 
@@ -62,4 +65,3 @@ setTimeout(() => {
     orderedIcecream.showInfo();
     console.log(`\nTotal cost: $${getTotalCost(orderedIcecream)}`);
 }, 3000);
-}
