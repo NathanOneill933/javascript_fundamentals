@@ -115,12 +115,14 @@ return chosenType[1][parseInt(flavorChoice) - 1];
 
 exports.chooseYourEtcflavors = () => {
 
-  const chocolate = Object.entries(chocolate)
-  const menuNumbers = showMenu(chocolate)
+  const chocolate = Object.entries(chocolate);
+  const menuNumbers = showMenu(chocolate);
   const chooseYourEtcflavors = promptUser(
     "Please choose your chocolate flavor: ",
     "Please enter only the numbers on the menu: ",
- menuNumbers)
+ menuNumbers
+  );
+
  return chocolate[parseInt(chooseYourEtcflavors) - 1];
 
 };
