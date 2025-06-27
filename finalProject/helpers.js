@@ -121,21 +121,18 @@ return chosenType[1][parseInt(flavorChoice) - 1];
 //Allows user to pick a savory flavor
 
 exports.chooseSavoryFlavor = () => {
-  // Convert the bun object into an array of entries and display the menu.
   const savoryFlavor = Object.entries(flavorSavory.savory);
 
-  // Show the menu and prompt the user to choose a bun.
+  
   const menuNumbers = showMenu(savoryFlavor);
 
-  // Prompt the user for their choice, ensuring it matches the menu numbers.
   const flavorChoice = promptUser(
     "Please choose your flavor: ",
     "Please enter only the numbers on the menu: ",
     menuNumbers
   );
 
-  // If the user chooses a flavor from the menu's number, return the selected flavor.
-  return flavorSavory[parseInt(flavorChoice) - 1];
+  return savoryFlavor[parseInt(flavorChoice) - 1];
 };
 
 
@@ -185,3 +182,10 @@ exports.fruitFlavor = () => {
   // Return the selected fruit flavor.
   return fruits[parseInt(fruitChoice) - 1];
 };
+
+exports.getTotalCost = (orderedIcecream) => {
+  return (
+    orderedIcecream.cone.pop() +
+    orderedIcecream.flavor.pop()
+  ).toFixed(2);
+}
