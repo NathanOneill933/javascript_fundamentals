@@ -42,6 +42,7 @@ if (userInput.toLowerCase() == "n"){
     
     if(flavorChoice == "1"){
         flavor = fruitFlavor();
+        console.log(flavorFruit)
         flavorValue = 1
     }else if(flavorChoice == "2"){
         flavor = chooseSavoryFlavor();
