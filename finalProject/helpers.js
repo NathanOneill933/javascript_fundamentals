@@ -69,9 +69,9 @@ exports.ChooseFlavorType = () => {
 
   // Prompt the user for their choice, ensuring it matches the menu numbers.
   const flavorChoice = promptUser(
-    "Please choose your flavor profile: ",
+    "Please choose your flavor profile::",
     "Please enter only the numbers on the menu: ",
-    menuNumbers)
+    menuNumbers.pop)
   return(String(flavorChoice))
 }
 

@@ -25,7 +25,7 @@ console.log(shopTitle);
 console.log(welcomeStr);
 
 //Promt user for input
-let userInput = prompt("Would you like to order Y or N?");
+let userInput = prompt("Would you like to order?: Y or N");
 
 //Checks if input is invalid, and keeps asking if it is
 while(!checkYorN(userInput)){
@@ -42,7 +42,6 @@ if (userInput.toLowerCase() == "n"){
     
     if(flavorChoice == "1"){
         flavor = fruitFlavor();
-        console.log(flavorFruit)
         flavorValue = 1
     }else if(flavorChoice == "2"){
         flavor = chooseSavoryFlavor();
