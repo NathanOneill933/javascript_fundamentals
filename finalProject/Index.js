@@ -1,7 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 const {
   checkYorN,
-  chooseYourflavors,
   chooseSavoryFlavor,
   chooseYourEtcflavors,
   chooseYourCone,
@@ -25,7 +24,7 @@ console.log(shopTitle);
 console.log(welcomeStr);
 
 //Promt user for input
-let userInput = prompt("Would you like to order?: Y or N");
+let userInput = prompt("Would you like to order?: Y or N:");
 
 //Checks if input is invalid, and keeps asking if it is
 while(!checkYorN(userInput)){

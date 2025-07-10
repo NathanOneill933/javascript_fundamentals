@@ -7,20 +7,32 @@ const coneTypes = require("./Ingredients/cones.js");
 const { chocolate } = require("./Ingredients/icecreamFlavors.js/chocolate.js");
 const prompt = require("prompt-sync")({ sigint: true });
 // Function to display the menu and return the menu numbers as a string.
+let menuNumbers = ""
 const showMenu = (itemList) => {
   let menuNumbers = "";
+
   console.log();
 
-  // Loop and format each item for display.
-  for (index = 0; index < itemList.length; index++) {
-    const arr = [...itemList[index]];
-    arr.splice(1, 0, " - $");
-    menuNumbers += (index + 1).toString();
-    console.log(`${index + 1}. ${arr.join("")}`);
+  for (let index = 0; index < itemList.length; index++) {
+    const item = itemList[index];
+
+    let displayText;
+
+    if (Array.isArray(item)) {
+      // It's something like ['Waffle Cone', '1.50']
+      displayText = `${item[0]} - $${item[1]}`;
+    } else {
+      // It's just a string like 'Fruit'
+      displayText = item;
+    }
+
+    const menuNumber = index + 1;
+    menuNumbers += menuNumber.toString();
+    console.log(`${menuNumber}: ${displayText}`);
   }
+
   console.log();
 
-  // Return the menu string.
   return menuNumbers;
 };
 
@@ -43,35 +55,28 @@ exports.checkYorN = function (input) {
 
 // Function to choose a Cone from the available options.
 exports.chooseYourCone = () => {
-  // Convert the Cone object into an array of entries and display the menu.
-  const cones = Object.entries(cone);
+  const cones = Object.entries(coneTypes.cones);
 
-  // Show the menu and prompt the user to choose a cone.
-  const menuNumbers = showMenu(cone);
+  const menuNumbers = showMenu(cones);
 
-  // Prompt the user for their choice, ensuring it matches the menu numbers.
   const coneChoice = promptUser(
     "Please choose your cone: ",
     "Please enter only the numbers on the menu: ",
     menuNumbers
   );
 
-  // If the user chooses a cone from the menu's number, return the selected cone.
   return cones[parseInt(coneChoice) - 1];
 };
 
 exports.ChooseFlavorType = () => {
-  // Convert the flavor object into an array of entries and display the menu.
-  const flavors = Object.entries(flavor);
-
-  // Show the menu and prompt the user to choose a flavor.
-  const menuNumbers = showMenu(flavors);
+  
+  const menuNumbers = showMenu(flavor);
 
   // Prompt the user for their choice, ensuring it matches the menu numbers.
   const flavorChoice = promptUser(
     "Please choose your flavor profile::",
     "Please enter only the numbers on the menu: ",
-    menuNumbers.pop)
+    menuNumbers)
   return(String(flavorChoice))
 }
 
@@ -82,14 +87,9 @@ exports.chooseYourFlavor = () => {
   const chocolate = Object.entries(flavorChocolate);
 
   //name & flavor list together
-  const categories = [
-    ['Fruits', fruits],
-    ['Savory', savory],
-    ['Chocolate', chocolate]
-  ];
-
-  // Show the menu & menu numbers 
-  const categoryMenuNumbers = showMenu(categories);
+  // To display flavor categories properly:
+  const flavorTypes = ['Fruits', 'Savory', 'Chocolate'];
+  const menuNumbers = showMenu(flavorTypes);
 
   const flavorTypeChoice = promptUser(
     "Please choose your flavor type: ",
@@ -152,19 +152,6 @@ exports.chooseYourEtcflavors = () => {
 
 };
 
-exports.chooseYourCone = () => {
-
-  const cones = Object.entries(coneTypes.cones);
-  const menuNumbers = showMenu(cones);
-  const chooseYourEtcflavors = promptUser(
-    "Please choose your cone: ",
-    "Please enter only the numbers on the menu: ",
- menuNumbers
-  );
-
- return cones[parseInt(chooseYourEtcflavors) - 1];
-
-};
 //fruit flavor
 exports.fruitFlavor = () => {
   // Convert the fruit object into an array of entries.
