@@ -23,8 +23,12 @@ const welcomeStr = "Welcome to our Icecream Shop!\n";
 console.log(shopTitle);
 console.log(welcomeStr);
 
+let keepOrdering = true;
 //Promt user for input
-let userInput = prompt("Would you like to order?: Y or N:");
+
+
+
+let userInput = prompt("Would you like to order?: Y or N");
 
 //Checks if input is invalid, and keeps asking if it is
 while(!checkYorN(userInput)){
